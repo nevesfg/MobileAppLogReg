@@ -5,7 +5,7 @@
     <solid android:color="@android:color/black"></solid>
 
 
-    <gradient android:startColor="@android:color/holo_green_dark"
+    <gradient android:startColor="@android:color/holo_blue_dark"
         android:centerColor="@android:color/white"
         android:angle="45"></gradient>
 
