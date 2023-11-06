@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Aplicacaoshape"
         tools:targetApi="31">
         <activity
+            android:name=".activity.ListActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.RemoveActivity"
             android:exported="false" />
         <activity

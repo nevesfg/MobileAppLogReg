@@ -1,14 +1,20 @@
 package br.edu.ifbaiano.guanambi.aplicacaoshape.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import br.edu.ifbaiano.guanambi.aplicacaoshape.R;
 import br.edu.ifbaiano.guanambi.aplicacaoshape.dao.UserDAO;
@@ -22,6 +28,8 @@ public class ActivityPrincipal extends AppCompatActivity {
     Button btnAtualizar;
     Button btnExcluir;
     TextView txtNome;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,5 +104,31 @@ public class ActivityPrincipal extends AppCompatActivity {
 
         //txtEmail.setText(email);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_superior, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+//        ALternativa usando if
+//        if(item.getItemId() == R.id.btni1){
+//            condigo aqui
+//        }
+
+        switch (item.getItemId()){
+            case R.id.btni1:
+                Toast.makeText(ActivityPrincipal.this, "Lista de usuarios", Toast.LENGTH_SHORT).show();
+                Intent it = new Intent(ActivityPrincipal.this, ListActivity.class);
+                startActivity(it);
+                return true;
+//            case R.id.btni2:
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
