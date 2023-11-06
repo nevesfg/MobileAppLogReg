@@ -67,6 +67,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        if (isLogado()){
+            Intent redirecionar = new Intent(MainActivity.this, ActivityPrincipal.class);
+            startActivity(redirecionar);
+            finish();
+        }
+
         textViewCada.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,7 +80,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(it);
             }
         });
+    }
 
-
+    private boolean isLogado(){
+        SharedPreferences sp = getSharedPreferences("appLogin", Context.MODE_PRIVATE);
+        return sp.contains("email");
     }
 }

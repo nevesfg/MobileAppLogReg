@@ -20,6 +20,12 @@ public class UserDAO {
         this.user = user;
     }
 
+    public void updateUserDetails(String email, String name, String password) {
+        this.user.setMail(email);
+        this.user.setName(name);
+        this.user.setPassword(password);
+    }
+
     public boolean verificarEmailESenha() {
 
         SQLiteDatabase dbLite = this.db.getReadableDatabase();
@@ -84,6 +90,8 @@ public class UserDAO {
     }
 
 
+
+
     public User obterUserByEmail(){
 
         SQLiteDatabase dbLite = this.db.getReadableDatabase();
@@ -102,7 +110,6 @@ public class UserDAO {
         this.user.setName(c.getString(c.getColumnIndexOrThrow("nome")));
 
         return this.user;
-
     }
 
 //PROXIMA AULA

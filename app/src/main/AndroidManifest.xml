@@ -15,6 +15,12 @@
         android:theme="@style/Theme.Aplicacaoshape"
         tools:targetApi="31">
         <activity
+            android:name=".activity.RemoveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AttActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -22,17 +28,16 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            </activity>
+        </activity>
         <activity
             android:name=".activity.Cadastro"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".activity.ActivityPrincipal"
             android:exported="true" />
         <activity
             android:name=".activity.MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>
