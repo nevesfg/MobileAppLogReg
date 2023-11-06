@@ -34,17 +34,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         edtEmail = findViewById(R.id.edtEmail);
         edtSenha = findViewById(R.id.edtSenha);
         btnEntrar = findViewById(R.id.btnCad);
         textViewCada = findViewById(R.id.tvCadastrar);
 
-
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//Utilizando preferências para armazenar informações rápidas e que podem ser 'perdidas'.
+            //Utilizando preferências para armazenar informações rápidas e que podem ser 'perdidas'.
                 SharedPreferences sp = getSharedPreferences("appLogin",
                         Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sp.edit();
