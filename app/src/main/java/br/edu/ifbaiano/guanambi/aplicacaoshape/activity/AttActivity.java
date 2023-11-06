@@ -17,9 +17,8 @@ import br.edu.ifbaiano.guanambi.aplicacaoshape.dao.UserDAO;
 import br.edu.ifbaiano.guanambi.aplicacaoshape.model.User;
 
 public class AttActivity extends AppCompatActivity {
-    EditText edtNome;
+    EditText edtNome, edtSenha;
     TextView txtemail;
-    EditText edtSenha;
     Button btnAtualizar;
     UserDAO uDao;
 
